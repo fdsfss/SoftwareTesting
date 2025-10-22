@@ -1,0 +1,76 @@
+Test Case: Purchase Product on Demoblaze
+
+Preconditions:
+- Test environment (https://www.demoblaze.com/) is accessible
+- Stable internet connection
+- Valid test account:
+  - Username: danaTest1
+  - Password: qwerty123
+
+Test Data:
+- Name: Dana
+- Country: Kazakhstan
+- City: Almaty
+- Credit Card: 111111111111
+- Month: 12
+- Year: 9999
+
+Test Steps:
+
+1. User Authentication
+   - Open browser and navigate to base URL
+   - Click "Log in" button
+   - Wait for login modal to appear
+   - Enter username: danaTest1
+   - Enter password: qwerty123
+   - Click "Log in"
+   - Verify "Log out" button is visible
+
+2. Product Selection and Cart Addition
+   - Click "Categories"
+   - Select "Phones"
+   - Wait for product list to load
+   - Click on the first product
+   - Wait for product details page to load
+   - Click "Add to cart"
+   - Handle alert and confirm product added successfully
+
+3. Checkout Process
+   - Click "Cart" navigation button
+   - Verify cart page loads
+   - Click "Place Order"
+   - Fill out purchase form:
+     * Name: Dana
+     * Country: Kazakhstan
+     * City: Almaty
+     * Credit Card: 111111111111
+     * Month: 12
+     * Year: 9999
+   - Click "Purchase"
+   - Wait for confirmation modal
+
+4. Order Confirmation
+   - Verify "Thank you for your purchase!" message appears
+   - Click "OK" to close confirmation
+   - Verify redirect to home or cart page
+
+5. User Logout
+   - Click "Log out"
+   - Verify "Log in" button becomes visible
+
+Postconditions:
+- User is logged out
+- Purchase transaction is completed
+- Order confirmation displayed successfully
+
+Expected Results:
+- User successfully logs in
+- Product is added to cart without errors
+- Checkout completes successfully
+- Order confirmation appears with valid data
+- User logs out securely
+
+Implementation Status:
+Test case finalized
+Test data configured
+Automation script ready for execution
